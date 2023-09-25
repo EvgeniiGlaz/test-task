@@ -1,0 +1,22 @@
+<div class="counters">
+  <div class="couter">
+    <span>Первый стрим: </span>
+    <span *ngIf="firstStream$ | async as counterData">
+      {{ counterData.items[0] }}
+    </span>
+  </div>
+  <div class="couter">
+    <span>Второй стрим: </span>
+    <span *ngIf="secondStream$ | async as counterData">
+      {{ counterData.items[0] }}
+    </span>
+  </div>
+  <div class="couter">
+    <span>Третий стрим: </span>
+    <span *ngIf="thirdStream$ | async as counterData">
+      {{ counterData.items[0] }}
+    </span>
+  </div>
+</div>
+
+<button (click)="fetchData()">Update</button>
